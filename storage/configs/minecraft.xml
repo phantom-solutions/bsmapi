@@ -1,1 +1,2 @@
 <!-- Whatever the client understands goes here -->
+<jarurl>https://s3.amazonaws.com/Minecraft.Download/versions/{version}/minecraft_server.{version}.jar</jarurl>
