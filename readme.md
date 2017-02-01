@@ -1,4 +1,4 @@
-# BSMAPI - _B_orealis (Game)_s_erver _M_anager API
+# BSMAPI - Borealis (Game)server Manager API
 For when you want to be even lazier.
 ---
 ## Concept
