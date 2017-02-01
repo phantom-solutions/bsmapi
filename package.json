@@ -16,7 +16,7 @@
     "server",
     "manager"
   ],
-  "author": "Hunter Nakagawa",
+  "author": "Hunter Nakagawa <hunternakagawa@outlook.com>",
   "license": "ISC",
   "homepage": "https://bitbucket.org/Mezarith/bsmapi#readme",
   "dependencies": {

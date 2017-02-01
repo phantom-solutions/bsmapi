@@ -34,3 +34,6 @@ Takes data, and creates a new config template.
 - Decide on a database (preferrably sqlite due to the low amount of requests).
 - Make this TODO more impressive. :feelsbadman:
 - Work on otherworld middlewares.
+
+## A note on how I do things
+I make these random files and changes based on what I want to do with the project. Meaning, I'll create stuff with the intention to get it into the project at a later date. This is my version of writing stuff down on a piece of paper to remind myself of something.
