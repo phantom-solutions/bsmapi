@@ -41,9 +41,23 @@ saimin.get('/config/:appid', function (req, res) {
     console.log("config request for appid " + req.params.appid);
     if (err) {
       console.log("error: config not found");
-      res.send("error:404");
+      res.send("404");
     } else {
       console.log("config found; sending data");
+      res.send(data);
+    }
+  });
+});
+
+// Fetches launch flags based on appid.
+saimin.get('/launch/:appid', function (req, res) {
+  configdata = fs.readFile('./storage/flags/' + req.params.appid, 'utf8', (err, data) => {
+    console.log("flagfile request for appid " + req.params.appid);
+    if (err) {
+      console.log("error: flagfile not found");
+      res.send("404");
+    } else {
+      console.log("flagfile found; sending data");
       res.send(data);
     }
   });
