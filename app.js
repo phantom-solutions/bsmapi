@@ -49,6 +49,7 @@ saimin.get('/config/:appid', function (req, res) {
   });
 });
 
+
 // Fetches launch flags based on appid.
 saimin.get('/launch/:appid', function (req, res) {
   configdata = fs.readFile('./storage/flags/' + req.params.appid, 'utf8', (err, data) => {
