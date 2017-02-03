@@ -20,10 +20,7 @@ Gets the commit sha of the BGM as the version number.
 Gets the commit sha of this API's repository.  
 
 **[GET] /config/:appid:**  
-Gets a predefined config file and sends it to the client via XML (eww).  
-
-**[GET] /launch/:appid:**  
-Gets the launch flags for the specified server.  
+Gets a predefined config file and sends it to the client via XML (eww).   
 
 **[PUT] /submit**  
 Takes data, and creates a new config template.

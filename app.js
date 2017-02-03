@@ -49,21 +49,6 @@ saimin.get('/config/:appid', function (req, res) {
   });
 });
 
-
-// Fetches launch flags based on appid.
-saimin.get('/launch/:appid', function (req, res) {
-  configdata = fs.readFile('./storage/flags/' + req.params.appid, 'utf8', (err, data) => {
-    console.log("flagfile request for appid " + req.params.appid);
-    if (err) {
-      console.log("error: flagfile not found");
-      res.send("404");
-    } else {
-      console.log("flagfile found; sending data");
-      res.send(data);
-    }
-  });
-});
-
 // Launch the integrated server.
 saimin.listen(config.port, function () {
   console.log(chalk.green("bsmapi listening on port " + config.port + "."));
