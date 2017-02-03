@@ -5,7 +5,7 @@ var fs = require('fs');
 var express = require('express');
 var saimin = express();
 var config = require('./storage/config.json');
-
+const crypto = require('crypto');
 // Does simple checks to make sure things are A-okay.
 if(process.argv[2] == "test") {
   if (fs.existsSync('node_modules')) {
@@ -48,6 +48,15 @@ saimin.get('/config/:appid', function (req, res) {
     }
   });
 });
+
+saimin.get('/index', function (req, res) {
+  //
+});
+
+saimin.post('/hash', function (req, res) {
+  var hashdata = req.body.data;
+  res.send(crypto.createHmac('sha256', hashdata));
+})
 
 // Launch the integrated server.
 saimin.listen(config.port, function () {
