@@ -1,38 +1,22 @@
-﻿Counter-Strike 1.6
+﻿============================================================================
+Counter-Strike 1.6
 +login anonymous +app_update 90 +app_set_config "90 mod czero" +quit
-
+============================================================================
 Counter-Strike: Condition Zero
 +login anonymous +app_update 90 +app_set_config "90 mod dod" +quit
-
+============================================================================
 Day of Defeat
 +login anonymous +app_update 90 +app_set_config "90 mod dmc" +quit
-
+============================================================================
 Half-Life: Opposing Force
 +login anonymous +app_update 90 +app_set_config "90 mod gearbox" +quit
-
+============================================================================
 Ricochet
 +login anonymous +app_update 90 +app_set_config "90 mod ricochet" +quit
-
+============================================================================
 Team Fortress Classic
 +login anonymous +app_update 90 +app_set_config "90 mod tfc" +quit
-
-Just Cause 2: Multiplayer
-+login anonymous +app_update 261140 +quit
-
-Killing Floor 2
-+login anonymous +app_update 232130 +quit
-
-Kingdoms Rise
-+login anonymous +app_update 265360 +quit
-
-Left 4 Dead 2
-+login anonymous +app_update 222860 +quit
-
-Left 4 Dead
-+login anonymous +app_update 222840 +quit
-
-Life is Feudal
-+login anonymous +app_update 320850 +quit
+============================================================================
 
 NEOTOKYO
 +login anonymous +app_update 313600 +quit
@@ -49,10 +33,6 @@ Pirates, Vikings, and Knights II
 Reflex
 +login anonymous +app_update 329740 +quit
 
-
-Rust
-+login anonymous +app_update 258550 +quit
-
 Serious Sam HD: The Second Encounter
 +login anonymous +app_update 299310 +quit
 
@@ -64,9 +44,6 @@ Synergy
 
 Takedown: Red Sabre
 +login anonymous +app_update 261020 +quit
-
-Team Fortress 2
-+login anonymous +app_update 232250 +quit
 
 Tower Unite
 +login anonymous +app_update 439660 +quit
