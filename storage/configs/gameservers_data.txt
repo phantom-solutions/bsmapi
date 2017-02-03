@@ -17,22 +17,3 @@ Ricochet
 Team Fortress Classic
 +login anonymous +app_update 90 +app_set_config "90 mod tfc" +quit
 ============================================================================
-
-
-Serious Sam HD: The Second Encounter
-+login anonymous +app_update 299310 +quit
-
-Space Engineers
-+login anonymous +app_update 298740 +quit
-
-Synergy
-+login anonymous +app_update 17525 +quit
-
-Takedown: Red Sabre
-+login anonymous +app_update 261020 +quit
-
-Tower Unite
-+login anonymous +app_update 439660 +quit
-
-Zombie Panic Source
-+login anonymous +app_update 17505 +quit
