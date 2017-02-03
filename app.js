@@ -49,10 +49,6 @@ saimin.get('/config/:appid', function (req, res) {
   });
 });
 
-saimin.get('/index', function (req, res) {
-  //
-});
-
 saimin.post('/hash', function (req, res) {
   var hashdata = req.body.data;
   res.send(crypto.createHmac('sha256', hashdata));
