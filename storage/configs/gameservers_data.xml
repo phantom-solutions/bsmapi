@@ -1,86 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<gameserver_listing>		
-	<server>
-		<server_name>Counter-Strike 1.6</server_name>
-		<deployment_parameters>+login anonymous +app_update 90 +app_set_config "90 mod czero" +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>	
-	<server>
-		<server_name>Counter-Strike: Condition Zero</server_name>
-		<deployment_parameters>+login anonymous +app_update 90 +app_set_config "90 mod dod" +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>	
-	<server>
-		<server_name>D.I.P.R.I.P.</server_name>
-		<deployment_parameters>+login anonymous +app_update 17535 +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
-	<server>
-		<server_name>Day of Defeat</server_name>
-		<deployment_parameters>+login anonymous +app_update 90 +app_set_config "90 mod dmc" +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
-	<server>
-		<server_name>Double Action</server_name>
-		<deployment_parameters>+login anonymous +app_update 317800 +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
-	<server>
-		<server_name>Dystopia</server_name>
-		<deployment_parameters>+login anonymous +app_update 17585 +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
-	<server>
-		<server_name>Eden Star</server_name>
-		<deployment_parameters>+login anonymous +app_update 419790 +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
-	<server>
-		<server_name>Empires</server_name>
-		<deployment_parameters>+login anonymous +app_update 460040 +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
-	<server>
-		<server_name>Eternal Silence</server_name>
-		<deployment_parameters>+login anonymous +app_update 17555 +quit</deployment_parameters>
-		<default_launchscript></default_launchscript>
-		<bgm_integration>none</bgm_integration>
-		<hostname></hostname>
-		<port></port>
-		<server_config_file></server_config_file>
-    </server>
+﻿Counter-Strike 1.6
++login anonymous +app_update 90 +app_set_config "90 mod czero" +quit
+
+Counter-Strike: Condition Zero
++login anonymous +app_update 90 +app_set_config "90 mod dod" +quit
+
+Day of Defeat
++login anonymous +app_update 90 +app_set_config "90 mod dmc" +quit
+
+Half-Life: Opposing Force
++login anonymous +app_update 90 +app_set_config "90 mod gearbox" +quit
+
 	<server>
 		<server_name>Fistful of Frags</server_name>
 		<deployment_parameters>+login anonymous +app_update 295230 +quit</deployment_parameters>
