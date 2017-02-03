@@ -1,8 +1,8 @@
 {
-  "name": "7 Days to Die",
+  "name": "",
   "steam_authrequired": false,
   "default_launchscript": "",
-  "deployment_parameters": "+login anonymous +app_update 294420 +quit",
+  "deployment_parameters": "",
   "server_config_file": "",
   "bgm_integration": "none"
 }

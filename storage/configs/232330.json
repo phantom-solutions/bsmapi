@@ -1,8 +1,8 @@
 {
-  "name": "7 Days to Die",
+  "name": "Counter-Strike: Source",
   "steam_authrequired": false,
   "default_launchscript": "",
-  "deployment_parameters": "+login anonymous +app_update 294420 +quit",
+  "deployment_parameters": "+login anonymous +app_update 232330 +quit",
   "server_config_file": "",
   "bgm_integration": "none"
 }

@@ -1,8 +1,8 @@
 {
-  "name": "7 Days to Die",
+  "name": "BlazeRush",
   "steam_authrequired": false,
   "default_launchscript": "",
-  "deployment_parameters": "+login anonymous +app_update 294420 +quit",
+  "deployment_parameters": "+login anonymous +app_update 332850 +quit",
   "server_config_file": "",
   "bgm_integration": "none"
 }
