@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "Half-Life 2: Deathmatch",
   "steam_authrequired": false,
   "default_launchscript": "",
-  "deployment_parameters": "",
+  "deployment_parameters": "+login anonymous +app_update 232370 +quit",
   "server_config_file": "",
   "bgm_integration": "none"
 }

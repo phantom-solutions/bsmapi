@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "Insurgency",
   "steam_authrequired": false,
   "default_launchscript": "",
-  "deployment_parameters": "",
+  "deployment_parameters": "+login anonymous +app_update 237410 +quit",
   "server_config_file": "",
   "bgm_integration": "none"
 }

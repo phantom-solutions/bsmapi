@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "Insurgency: Modern Infantry Combat",
   "steam_authrequired": false,
   "default_launchscript": "",
-  "deployment_parameters": "",
+  "deployment_parameters": "+login anonymous +app_update 17705 +quit",
   "server_config_file": "",
   "bgm_integration": "none"
 }
