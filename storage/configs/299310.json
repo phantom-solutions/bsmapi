@@ -1,0 +1,8 @@
+{
+  "name": "Serious Sam HD: The Second Encounter",
+  "steam_authrequired": false,
+  "default_launchscript": "",
+  "deployment_parameters": "+login anonymous +app_update 299310 +quit",
+  "server_config_file": "",
+  "bgm_integration": "none"
+}

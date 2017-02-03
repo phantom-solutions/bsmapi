@@ -1,0 +1,8 @@
+{
+  "name": "NEOTOKYO",
+  "steam_authrequired": false,
+  "default_launchscript": "",
+  "deployment_parameters": "+login anonymous +app_update 313600 +quit",
+  "server_config_file": "",
+  "bgm_integration": "none"
+}

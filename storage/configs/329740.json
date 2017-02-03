@@ -1,0 +1,8 @@
+{
+  "name": "Reflex",
+  "steam_authrequired": false,
+  "default_launchscript": "",
+  "deployment_parameters": "+login anonymous +app_update 329740 +quit",
+  "server_config_file": "",
+  "bgm_integration": "none"
+}

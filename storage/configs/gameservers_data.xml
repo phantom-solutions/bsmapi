@@ -18,20 +18,6 @@ Team Fortress Classic
 +login anonymous +app_update 90 +app_set_config "90 mod tfc" +quit
 ============================================================================
 
-NEOTOKYO
-+login anonymous +app_update 313600 +quit
-
-NS2: Combat
-+login anonymous +app_update 313900 +quit
-
-Nuclear Dawn
-+login anonymous +app_update 111710 +quit
-
-Pirates, Vikings, and Knights II
-+login anonymous +app_update 17575 +quit
-
-Reflex
-+login anonymous +app_update 329740 +quit
 
 Serious Sam HD: The Second Encounter
 +login anonymous +app_update 299310 +quit

@@ -1,0 +1,8 @@
+{
+  "name": "Pirates, Vikings, and Knights II",
+  "steam_authrequired": false,
+  "default_launchscript": "",
+  "deployment_parameters": "+login anonymous +app_update 17575 +quit",
+  "server_config_file": "",
+  "bgm_integration": "none"
+}
