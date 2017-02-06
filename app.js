@@ -1,7 +1,9 @@
 var chalk = require('chalk');
 var request = require('request');
 var db_middleware = require('./otherworld/db.middleware.js');
-var fs = require('fs');
+var fs = require('fs')
+var path = require( 'path' );
+var process = require( "process" );
 var express = require('express');
 var saimin = express();
 var config = require('./storage/config.json');
@@ -52,6 +54,20 @@ saimin.get('/config/:appid', function (req, res) {
 saimin.post('/hash', function (req, res) {
   var hashdata = req.body.data;
   res.send(crypto.createHmac('sha256', hashdata));
+})
+
+// Gets the well-anticipated index of all configs.
+saimin.get('/index', function (req, res) {
+  var directory = "./storage/configs";
+  var indexlist = {"90": "Counter-Strike 1.6"}
+  fs.readdir( directory, function( err, files ) {
+          files.forEach(function(file, index) {
+            var indexid = file.replace(".json", "");
+            var jsonfile = require('./storage/configs/' + indexid + '.json');
+            indexlist[indexid] = jsonfile.name;
+          });
+          res.send(indexlist);
+  });
 })
 
 // Launch the integrated server.
