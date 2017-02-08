@@ -66,9 +66,20 @@ saimin.get('/index', function (req, res) {
             var jsonfile = require('./storage/configs/' + indexid + '.json');
             indexlist[indexid] = jsonfile.name;
           });
-          res.send(indexlist);
+          res.json(indexlist);
   });
 });
+
+// Handle authentication
+saimin.post('/user/:action', function (req, res) {
+  if (req.params.action == "register") {
+    //
+  }
+});
+
+saimin.all('/', function (req, res) {
+  res.send('410');
+})
 
 // Launch the integrated server.
 saimin.listen(config.port, function () {
