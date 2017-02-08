@@ -1,7 +1,8 @@
 {
   "name": "ARK: Survival Evolved",
   "steam_authrequired": false,
-  "default_launchscript": "",
+  "server_executable_location": "",
+  "default_launch_arguments": "",
   "deployment_parameters": "+login anonymous +app_update 376030 +quit",
   "server_config_file": "",
   "bgm_integration": "none"

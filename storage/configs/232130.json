@@ -1,7 +1,8 @@
 {
   "name": "Killing Floor 2",
   "steam_authrequired": false,
-  "default_launchscript": "",
+  "server_executable_location": "",
+  "default_launch_arguments": "",
   "deployment_parameters": "+login anonymous +app_update 232130 +quit",
   "server_config_file": "",
   "bgm_integration": "none"
