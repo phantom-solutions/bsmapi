@@ -1,0 +1,8 @@
+{
+  "name": "Counter-Strike 1.6",
+  "authreq": false,
+  "deflaunch": "",
+  "recipe": "+login anonymous +force_install_dir :installpath: +app_update 4020 +quit",
+  "config": "",
+  "integration": "none"
+}

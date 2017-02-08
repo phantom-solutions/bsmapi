@@ -52,14 +52,14 @@ saimin.get('/config/:appid', function (req, res) {
 });
 
 saimin.post('/hash', function (req, res) {
-  var hashdata = req.body.data;
+  var hashdata = req.data;
   res.send(crypto.createHmac('sha256', hashdata));
-})
+});
 
 // Gets the well-anticipated index of all configs.
 saimin.get('/index', function (req, res) {
   var directory = "./storage/configs";
-  var indexlist = {"90": "Counter-Strike 1.6"}
+  var indexlist = {"0": "0"}
   fs.readdir( directory, function( err, files ) {
           files.forEach(function(file, index) {
             var indexid = file.replace(".json", "");
@@ -68,7 +68,7 @@ saimin.get('/index', function (req, res) {
           });
           res.send(indexlist);
   });
-})
+});
 
 // Launch the integrated server.
 saimin.listen(config.port, function () {
