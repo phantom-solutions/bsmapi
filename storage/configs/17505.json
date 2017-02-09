@@ -6,5 +6,5 @@
   "default_launch_arguments": "",
   "deployment_parameters": "+login anonymous +app_update 17505 +quit",
   "server_config_file": "",
-  "bgm_integration": "none"
+  "bsm_integration": "none"
 }
