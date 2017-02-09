@@ -1,6 +1,7 @@
 {
   "name": "Left 4 Dead",
   "steam_authrequired": false,
+  "steamcmd_required": true,
   "server_executable_location": "",
   "default_launch_arguments": "",
   "deployment_parameters": "+login anonymous +app_update 222840 +quit",

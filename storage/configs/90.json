@@ -1,6 +1,7 @@
 {
   "name": "Counter-Strike 1.6",
-  "authreq": false,
+  "steam_authrequired": false,
+  "steamcmd_required": true,
   "server_executable_location": "",
   "default_launch_arguments": "",
   "recipe": "+login anonymous +force_install_dir :installpath: +app_update 4020 +quit",

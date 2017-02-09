@@ -1,6 +1,7 @@
 {
   "name": "Double Action",
   "steam_authrequired": false,
+  "steamcmd_required": true,
   "server_executable_location": "",
   "default_launch_arguments": "",
   "deployment_parameters": "+login anonymous +app_update 317800 +quit",
