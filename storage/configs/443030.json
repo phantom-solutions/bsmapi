@@ -4,7 +4,7 @@
   "steamcmd_required": true,
   "server_executable_location": "",
   "default_launch_arguments": "",
-  "deployment_parameters": "+login anonymous +app_update 443030 +quit",
+  "deployment_parameters": "+login anonymous +app_update 443030",
   "server_config_file": "",
   "bsm_integration": "none"
 }
