@@ -8,6 +8,7 @@ var express = require('express');
 var saimin = express();
 var config = require('./storage/config.json');
 const crypto = require('crypto');
+var winston = require('winston');
 // Does simple checks to make sure things are A-okay.
 if(process.argv[2] == "test") {
   if (fs.existsSync('node_modules')) {
@@ -25,14 +26,22 @@ if(process.argv[2] == "test") {
   }
 }
 
-// Main code base.
-saimin.get('/bsmver', function (req, res) {
-  request('https://api.github.com/repos/cyberstrawberry101/Borealis-Game-Manager/git/refs/heads/master', function (error, response, data) {
-    if (!error && response.statusCode == 200) {
-      res.send(body.object.sha);
-    }
-  })
+// Timestamp function that refuses to work.
+function timestamp(){
+  timestamp = new Date();
+  return timestamp.toLocaleString();
+};
+console.log(timestamp())
+
+// Start the logger.
+var applog = new (winston.Logger)({
+  transports: [
+    new (winston.transports.Console)(),
+    new (winston.transports.File)({ filename: './storage/app.log' })
+  ]
 });
+
+// :D
 saimin.all('/areyoualive', function (req, res) {
   res.send("no");
 });
@@ -40,20 +49,26 @@ saimin.all('/areyoualive', function (req, res) {
 // Fetches config files based on appid.
 saimin.get('/config/:appid', function (req, res) {
   configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) => {
-    console.log("config request for appid " + req.params.appid);
+    applog.info(timestamp() + " received request for appid " + req.params.appid + ".");
     if (err) {
-      console.log("error: config not found");
+      applog.error(timestamp() + " couldn't find that config. my b.");
       res.send("404");
     } else {
-      console.log("config found; sending data");
+      applog.info(timestamp() + " found config - sending it.");
       res.send(data);
     }
   });
 });
 
 saimin.post('/hash', function (req, res) {
+  const hash = crypto.createHash('sha256');
   var hashdata = req.data;
-  res.send(crypto.createHmac('sha256', hashdata));
+  hash.on('readable', () => {
+    const data = hash.read();
+    if (data)
+      res.send(data.toString('hex'));
+  });
+  hash.write(hashdata);
 });
 
 // Gets the well-anticipated index of all configs.
@@ -77,6 +92,7 @@ saimin.post('/user/:action', function (req, res) {
   }
 });
 
+// Respond with 410 because yes.
 saimin.all('/', function (req, res) {
   res.send('410');
 })
@@ -84,4 +100,17 @@ saimin.all('/', function (req, res) {
 // Launch the integrated server.
 saimin.listen(config.port, function () {
   console.log(chalk.green("bsmapi listening on port " + config.port + "."));
+});
+
+if (process.platform === "win32") {
+  var rl = require("readline").createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  rl.on("SIGINT", function () {
+    process.emit("SIGINT");
+  });
+}
+process.on("SIGINT", function () {
+  process.exit();
 });
