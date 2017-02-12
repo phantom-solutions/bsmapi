@@ -2,7 +2,7 @@
   "name": "Garry's Mod",
   "steam_authrequired": false,
   "steamcmd_required": true,
-  "server_executable_location": "",
+  "server_executable_location": "\steamapps\common\GarrysModDS\srcds.exe",
   "default_launch_arguments": "",
   "server_config_file": "",
   "bsm_integration": "none"
