@@ -3,7 +3,7 @@
   "steam_authrequired": false,
   "steamcmd_required": true,
   "server_executable_location": "\steamapps\common\GarrysModDS\srcds.exe",
-  "default_launch_arguments": "",
-  "server_config_file": "",
+  "default_launch_arguments": "-console -game garrysmod +map gm_construct +maxplayers 16",
+  "server_config_file": "\steamapps\common\GarrysModDS\garrysmod\cfg\server.cfg",
   "bsm_integration": "none"
 }
