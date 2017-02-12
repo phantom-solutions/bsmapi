@@ -48,7 +48,7 @@ saimin.get('/config/:appid', function (req, res) {
 // Gets the well-anticipated index of all configs.
 saimin.get('/index', function (req, res) {
   var directory = "./storage/configs";
-  var indexlist = {"0": "0"}
+  var indexlist = {}
   fs.readdir( directory, function( err, files ) {
           files.forEach(function(file, index) {
             var indexid = file.replace(".json", "");
