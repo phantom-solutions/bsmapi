@@ -1,5 +1,7 @@
 # BSMAPI - Borealis (Game)server Manager API
-For when you want to be even lazier.
+HEADS UP: I'm going on hiatus for Spring semester. I've decided to take on more than a full load (18 total units/12 for full-time). Consequently, I'm really busy with both schoolwork, and have no time to work on any projects. This project is no longer being actively maintained by me. If anyone wants to pick up the torch and continue development (I really don't see why), go ahead. Fork this. I don't really care. As long as it satisfies whatever it needs to, I'm content.  
+
+Farewell, until June!
 ---
 ## Concept
 The point behind this project is to provide a backend for the client application to fetch data from on the fly, thus removing the need to push data with app updates (the app can just check this bad boy for new stuff). It'll store server configurations, and that's about it, really. There's some foundation for other concepts to be introduced at a later point (authentication, etc.)
