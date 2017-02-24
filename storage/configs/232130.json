@@ -2,8 +2,8 @@
   "name": "Killing Floor 2",
   "steam_authrequired": false,
   "steamcmd_required": true,
-  "server_executable_location": "",
-  "default_launch_arguments": "",
-  "server_config_file": "",
-  "bsm_integration": "none"
+  "server_executable_location": "\\steamapps\\common\\killingfloor2\\Binaries\\Win64\\KFServer.exe",
+  "default_launch_arguments": "Difficulty=1?GameLength=2",
+  "server_config_file": "\\steamapps\\common\\killingfloor2\\KFGame\\Config\\PCServer-KFGame.ini",
+  "bsm_integration": "partial"
 }
