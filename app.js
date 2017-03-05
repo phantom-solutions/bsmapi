@@ -53,7 +53,7 @@ saimin.get('/index', function (req, res) {
           files.forEach(function(file, index) {
             var indexid = file.replace(".json", "");
             var jsonfile = require('./storage/configs/' + indexid + '.json');
-            indexlist[indexid] = jsonfile.name;
+            indexlist[indexid] = jsonfile.SERVER_name;
           });
           res.json(indexlist);
           console.log(chalk.yellow("[INFO](" + Date().toLocaleString() + ") Sending index."));
