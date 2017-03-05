@@ -1,9 +1,12 @@
-{
-  "name": "Reflex",
-  "steam_authrequired": false,
-  "steamcmd_required": true,
-  "server_executable_location": "",
-  "default_launch_arguments": "",
-  "server_config_file": "",
+{  
+  "SERVER_name": "Reflex",
+  "SERVER_launch_arguments": "",
+  "DIR_executable": "",
+  "DIR_config": "", 
+  "DIR_config_file": "",
+  "STEAM_authrequired": false,
+  "STEAM_steamcmd_required": true,
+  "STEAM_workshop_enabled": false,
+  "srcds_server": false,
   "bsm_integration": "none"
 }

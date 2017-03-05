@@ -45,7 +45,7 @@ saimin.get('/config/:appid', function (req, res) {
     }
   });
 });
-// Gets the well-anticipated index of all configs.
+// Gets the index of all configs.
 saimin.get('/index', function (req, res) {
   var directory = "./storage/configs";
   var indexlist = {}

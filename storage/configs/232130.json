@@ -8,5 +8,5 @@
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": true,
   "srcds_server": false,
-  "bsm_integration": "partial"
+  "bsm_integration": "none"
 }
