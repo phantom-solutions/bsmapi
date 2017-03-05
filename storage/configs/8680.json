@@ -1,10 +1,10 @@
 {  
-  "SERVER_name": "ARK: Survival Evolved with Scorched Earth",
+  "SERVER_name": "RACE 07 Demo - Crowne Plaza Edition",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 
   "DIR_config_file": "",
-  "STEAM_authrequired": false,
+  "STEAM_authrequired": true,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": false,
   "srcds_server": false,
