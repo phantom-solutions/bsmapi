@@ -3,7 +3,7 @@
   "SERVER_launch_arguments": "-console -game garrysmod +map gm_construct +maxplayers 16",
   "DIR_executable": "\\steamapps\\common\\GarrysModDS\\srcds.exe",
   "DIR_config": "\\steamapps\\common\\GarrysModDS\\garrysmod\\cfg", 
-  "DIR_config_file": "server.cfg",
+  "DIR_config_file": "\\server.cfg",
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": true,
