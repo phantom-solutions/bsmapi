@@ -7,6 +7,6 @@
   "STEAM_authrequired": true,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": false,
-  "srcds_server": false,
+  "ENGINE_type": "GOLDSOURCE",
   "bsm_integration": "none"
 }

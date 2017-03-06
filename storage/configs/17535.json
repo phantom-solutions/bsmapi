@@ -7,6 +7,6 @@
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": false,
-  "srcds_server": true,
+  "ENGINE_type": "UNKNOWN",
   "bsm_integration": "none"
 }
