@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "Homefront",
+  "SERVER_type": "Homefront",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

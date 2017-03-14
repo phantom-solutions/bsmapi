@@ -1,5 +1,5 @@
 {
-  "SERVER_name": "Half-Life Deathmatch: Source",
+  "SERVER_type": "Half-Life Deathmatch: Source",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

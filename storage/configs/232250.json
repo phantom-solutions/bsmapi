@@ -1,5 +1,5 @@
 {
-  "SERVER_name": "Team Fortress 2",
+  "SERVER_type": "Team Fortress 2",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "NS2: Combat",
+  "SERVER_type": "NS2: Combat",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

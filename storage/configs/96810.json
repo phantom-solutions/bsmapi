@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "Nexuiz",
+  "SERVER_type": "Nexuiz",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

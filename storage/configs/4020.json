@@ -1,5 +1,5 @@
 {
-  "SERVER_name": "Garry's Mod",
+  "SERVER_type": "Garry's Mod",
   "SERVER_launch_arguments": "-console -game garrysmod +map gm_construct +maxplayers 16",
   "DIR_executable": "\\steamapps\\common\\GarrysModDS\\srcds.exe",
   "DIR_config": "\\steamapps\\common\\GarrysModDS\\garrysmod\\cfg", 

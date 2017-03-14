@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "GTR Evolution Demo",
+  "SERVER_type": "GTR Evolution Demo",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

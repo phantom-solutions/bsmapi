@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "Red Orchestra",
+  "SERVER_type": "Red Orchestra",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

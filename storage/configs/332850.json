@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "BlazeRush",
+  "SERVER_type": "BlazeRush",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

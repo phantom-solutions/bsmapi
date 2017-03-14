@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "Contagion",
+  "SERVER_type": "Contagion",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

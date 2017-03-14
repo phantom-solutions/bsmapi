@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "Project Zomboid",
+  "SERVER_type": "Project Zomboid",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 

@@ -1,5 +1,5 @@
 {
-  "SERVER_name": "Synergy",
+  "SERVER_type": "Synergy",
   "SERVER_launch_arguments": "-console -game synergy +map d1_trainstation_01 +maxplayers 16",
   "DIR_executable": "\\steamapps\\common\\Synergy Dedicated Server\\srcds.exe",
   "DIR_config": "\\steamapps\\common\\Synergy Dedicated Server\\synergy\\cfg", 

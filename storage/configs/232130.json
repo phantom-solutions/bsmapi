@@ -1,5 +1,5 @@
 {
-  "SERVER_name": "Killing Floor 2",
+  "SERVER_type": "Killing Floor 2",
   "SERVER_launch_arguments": "Difficulty=1?GameLength=2",
   "DIR_executable": "\\steamapps\\common\\killingfloor2\\Binaries\\Win64\\KFServer.exe",
   "DIR_config": "\\steamapps\\common\\killingfloor2\\KFGame\\Config\\", 

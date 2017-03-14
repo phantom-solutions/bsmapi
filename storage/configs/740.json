@@ -1,5 +1,5 @@
 {  
-  "SERVER_name": "Counter-Strike: Global Offensive",
+  "SERVER_type": "Counter-Strike: Global Offensive",
   "SERVER_launch_arguments": "",
   "DIR_executable": "",
   "DIR_config": "", 
