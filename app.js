@@ -16,13 +16,13 @@ configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf
 	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for AppID: " + req.params.appid + "]"));
 	
 	if (err) {
-		console.log(chalk.bgRed("[ERROR]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Couldn't locate AppID: " + req.params.appid + "]"));
 		res.send("404");
+		console.log(chalk.bgRed("[ERROR]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Couldn't locate AppID: " + req.params.appid + "]"));
 	} 
 	else 
 	{
-		console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending Config Data for AppID: " + req.params.appid + "]"));
 		res.send(data);
+		console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending Config Data for AppID: " + req.params.appid + "]"));
 	}
 });
 });
