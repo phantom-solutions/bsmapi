@@ -13,15 +13,15 @@ const crypto = require('crypto');
 saimin.get('/config/:appid', function (req, res) {
 configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) => 
 {
-	console.log(chalk.bgGreen("[INFO]") + " [" + Date().toLocaleString() + "] " + chalk.bgBlue("[Got request for AppID: " + req.params.appid) + "]");
+	console.log(chalk.bgGreen("[INFO]") + " [" + Date().toLocaleString() + "] " + chalk.bgBlue("[Got request for AppID: " + req.params.appid + "]"));
 	
 	if (err) {
-		console.log(chalk.bgRed("[ERROR]") + Date().toLocaleString() + chalk.bgBlue("Couldn't locate AppID: " + req.params.appid));
+		console.log(chalk.bgRed("[ERROR]") + " [" + Date().toLocaleString() + "] " + chalk.bgBlue("[Couldn't locate AppID: " + req.params.appid + "]"));
 		res.send("404");
 	} 
 	else 
 	{
-		console.log(chalk.bgGreen("[INFO]") + Date().toLocaleString() + " Sending Config Data for AppID: " + req.params.appid));
+		console.log(chalk.bgGreen("[INFO]") + " [" + Date().toLocaleString() + "] " + chalk.bgBlue("[Sending Config Data for AppID: " + req.params.appid + "]"));
 		res.send(data);
 	}
 });
