@@ -13,16 +13,16 @@ const crypto = require('crypto');
 saimin.get('/config/:appid', function (req, res) {
 configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) => 
 {
-	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for AppID: " + req.params.appid + "]"));
+	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
 	
 	if (err) {
 		res.send("404");
-		console.log(chalk.bgRed("[ERROR]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Couldn't locate AppID: " + req.params.appid + "]"));
+		console.log(chalk.bgRed("[ERROR]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Couldn't locate appID: " + req.params.appid + "]"));
 	} 
 	else 
 	{
 		res.send(data);
-		console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending Config Data for AppID: " + req.params.appid + "]"));
+		console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data for appID: " + req.params.appid + "]"));
 	}
 });
 });
@@ -44,14 +44,14 @@ fs.readdir( directory, function( err, files )
 		indexlist[indexid] = jsonfile.SERVER_type;
     });
         res.json(indexlist);
-        console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending Index...]"));
+        console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending index...]"));
 	});
 });
 
 // Launch the integrated server.
 saimin.listen(config.port, config.ip, function () 
 {
-	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Borealis Server Manager API: Listening on Port " + config.port + "]"));
+	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgGreen("[Borealis Server Manager API: listening on port: " + config.port + "]"));
 });
 
 // Respond with 410.
@@ -71,7 +71,7 @@ saimin.all('/areyoualive', function (req, res)
 //==============================================================//
 // Handle Server Shutdown
 process.on("SIGINT", function () {
-	console.log(chalk.bgRed("[SHUTTING DOWN]") + " (" + Date().toLocaleString() + ") " + chalk.bgRed("[Borealis Server Manager API: Shutting Down...]"));
+	console.log(chalk.bgRed("[SHUTTING DOWN]") + " (" + Date().toLocaleString() + ") " + chalk.bgRed("[Borealis Server Manager API: Shutting down...]"));
 	process.exit();
 });
 
