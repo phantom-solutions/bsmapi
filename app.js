@@ -8,7 +8,9 @@ var saimin = express();
 var config = require('./storage/config.json');
 const crypto = require('crypto');
 
-
+//==============================================================//
+// API REQUEST HANDLERS                                         //
+//==============================================================//
 // Fetches config files based on appid.
 saimin.get('/config/:appid', function (req, res) {
 configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) => 
@@ -27,10 +29,6 @@ configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf
 });
 });
 
-
-//==============================================================//
-// API REQUEST HANDLERS                                         //
-//==============================================================//
 // Gets the index of all configs.
 saimin.get('/index', function (req, res) {
 var directory = "./storage/configs";
@@ -65,6 +63,7 @@ saimin.all('/areyoualive', function (req, res)
 {
 	res.send("yes");
 });
+
 
 //==============================================================//
 // API SHUTDOWN HANDLERS                                        //
