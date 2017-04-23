@@ -2,7 +2,7 @@
   "SERVER_type": "Garry's Mod",
   "SERVER_launch_arguments": "-console -game garrysmod +map gm_construct +maxplayers 16",
   "SERVER_executable": "srcds.exe",
-  "DIR_root": "\\GarrysModDS
+  "DIR_root": "\\GarrysModDS",
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": true,
