@@ -4,6 +4,7 @@
   "SERVER_executable": "Binaries\\Win64\\KFServer.exe\\KFServer.exe",
   "DIR_root": "\\killingfloor2",
   "DIR_maps": "\\KFGame\\BrewedPC\\maps",
+  "DIR_maps_file_extension": "*.kfm",
   "DIR_mods": "\\KFGame\\BrewedPC",
   "DIR_config": "\\KFGame\\Config", 
   "STEAM_authrequired": false,

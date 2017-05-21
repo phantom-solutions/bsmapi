@@ -4,6 +4,7 @@
   "SERVER_executable": "srcds.exe",
   "DIR_root": "\\GarrysModDS",
   "DIR_maps": "\\garrysmod\\maps",
+  "DIR_maps_file_extension": "*.bsp",
   "DIR_mods": "\\garrysmod\\addons",
   "DIR_config": "\\garrysmod\\cfg",  
   "STEAM_authrequired": false,
