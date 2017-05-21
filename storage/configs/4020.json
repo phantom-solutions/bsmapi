@@ -1,7 +1,7 @@
 {
   "SERVER_type": "Garry's Mod",
   "SERVER_launch_arguments": "-console -game garrysmod",
-  "SERVER_executable": "srcds.exe",
+  "SERVER_executable": "\\srcds.exe",
   "DIR_root": "\\GarrysModDS",
   "DIR_maps": "\\garrysmod\\maps",
   "DIR_maps_file_extension": "*.bsp",

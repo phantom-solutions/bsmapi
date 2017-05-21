@@ -1,7 +1,7 @@
 {
   "SERVER_type": "Team Fortress 2",
   "SERVER_launch_arguments": "-console -game tf",
-  "SERVER_executable": "srcds.exe",
+  "SERVER_executable": "\\srcds.exe",
   "DIR_root": "\\Team Fortress 2 Dedicated Server",
   "DIR_maps": "\\tf\\maps",
   "DIR_maps_file_extension": "*.bsp",
