@@ -4,6 +4,8 @@
   "SERVER_executable": "srcds.exe",
   "DIR_root": "\\Team Fortress 2 Dedicated Server",
   "DIR_maps": "\\tf\\maps",
+  "DIR_mods": "\\tf\\custom",
+  "DIR_config": "\\tf\\cfg",  
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": false,
