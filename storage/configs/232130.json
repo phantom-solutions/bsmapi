@@ -1,12 +1,14 @@
 {
   "SERVER_type": "Killing Floor 2",
   "SERVER_launch_arguments": "Difficulty=1?GameLength=2",
-  "DIR_executable": "\\steamapps\\common\\killingfloor2\\Binaries\\Win64\\KFServer.exe",
-  "DIR_config": "\\steamapps\\common\\killingfloor2\\KFGame\\Config\\", 
-  "DIR_config_file": "PCServer-KFGame.ini",
+  "SERVER_executable": "Binaries\\Win64\\KFServer.exe\\KFServer.exe",
+  "DIR_root": "\\killingfloor2",
+  "DIR_maps": "\\KFGame\\BrewedPC\\maps",
+  "DIR_mods": "\\KFGame\\BrewedPC",
+  "DIR_config": "\\KFGame\\Config", 
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": true,
   "ENGINE_type": "UNREAL",
-  "bsm_integration": "none"
+  "bsm_integration": "partial"
 }
