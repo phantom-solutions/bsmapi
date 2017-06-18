@@ -26,11 +26,12 @@ Gets a predefined config file and sends it to the client via XML (eww).
 Takes data, and creates a new config template.
 
 ## TODO
-- Actually implement these endpoints.
-- Find enough time to work on this.
-- Decide on a database (preferrably sqlite due to the low amount of requests).
-- Make this TODO more impressive. :feelsbadman:
-- Work on otherworld middlewares.
+- Implement version checking.
+  - [?] Client sends version in header, API gets the latest Github release, compares data, and tells client that it's out of date.
+  - [?] May later lead on to auto-updating.
+- Implement multiple response formats (XML, JSON, YAML, etc).
+- Implement actual error handling instead of letting the user deal with it.
+- Clean up codebase so it doesn't look like one of my essays.
 
 ## A note on how I do things
 I make these random files and changes based on what I want to do with the project. Meaning, I'll create stuff with the intention to get it into the project at a later date. This is my version of writing stuff down on a piece of paper to remind myself of something.
