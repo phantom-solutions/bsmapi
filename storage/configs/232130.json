@@ -1,6 +1,6 @@
 {
   "SERVER_type": "Killing Floor 2",
-  "SERVER_launch_arguments": "Difficulty=1?GameLength=2",
+  "SERVER_launch_arguments": "?Difficulty=1?GameLength=2",
   "SERVER_executable": "\\Binaries\\Win64\\KFServer.exe",
   "DIR_root": "\\killingfloor2",
   "DIR_maps": "\\KFGame\\BrewedPC\\maps",
