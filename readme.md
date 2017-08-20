@@ -1,8 +1,6 @@
 # BSMAPI - Borealis (Game)server Manager API
-HEADS UP: I'm going on hiatus for Spring semester. I've decided to take on more than a full load (18 total units/12 for full-time). Consequently, I'm really busy with both schoolwork and life stuff, and have no time to work on any projects. This project is no longer being actively maintained by me. If anyone wants to pick up the torch and continue development (I really don't see why), go ahead. Fork this. I don't really care. As long as it satisfies whatever it needs to, I'm content.  
+Just a simple API backend for the Borealis Gameserver Manager.
 
-Farewell, until June!
----
 ## Concept
 The point behind this project is to provide a backend for the client application to fetch data from on the fly, thus removing the need to push data with app updates (the app can just check this bad boy for new stuff). It'll store server configurations, and that's about it, really. There's some foundation for other concepts to be introduced at a later point (authentication, etc.)
 
@@ -28,11 +26,12 @@ Gets a predefined config file and sends it to the client via XML (eww).
 Takes data, and creates a new config template.
 
 ## TODO
-- Actually implement these endpoints.
-- Find enough time to work on this.
-- Decide on a database (preferrably sqlite due to the low amount of requests).
-- Make this TODO more impressive. :feelsbadman:
-- Work on otherworld middlewares.
+- Implement version checking.
+  - [?] Client sends version in header, API gets the latest Github release, compares data, and tells client that it's out of date.
+  - [?] May later lead on to auto-updating.
+- Implement multiple response formats (XML, JSON, YAML, etc).
+- Implement actual error handling instead of letting the user deal with it.
+- Clean up codebase so it doesn't look like one of my essays.
 
 ## A note on how I do things
 I make these random files and changes based on what I want to do with the project. Meaning, I'll create stuff with the intention to get it into the project at a later date. This is my version of writing stuff down on a piece of paper to remind myself of something.
