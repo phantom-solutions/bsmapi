@@ -9,7 +9,7 @@
   "DIR_config": "\\tf\\cfg",  
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
-  "STEAM_workshop_enabled": true,
+  "STEAM_workshop_enabled": false,
   "ENGINE_type": "SOURCE",
   "bsm_integration": "partial"
 }
