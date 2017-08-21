@@ -1,9 +1,10 @@
 {
   "SERVER_type": "Synergy",
-  "SERVER_launch_arguments": "-console -game synergy +map d1_trainstation_01 +maxplayers 16",
-  "DIR_executable": "\\steamapps\\common\\Synergy Dedicated Server\\srcds.exe",
+  "SERVER_launch_arguments": "",
+  "SERVER_executable": "\\srcds.exe",
   "DIR_config": "\\steamapps\\common\\Synergy Dedicated Server\\synergy\\cfg", 
   "DIR_config_file": "\\server.cfg",
+  "DIR_maps_file_extension": "*.bsp",
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": false,

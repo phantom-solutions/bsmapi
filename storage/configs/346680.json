@@ -1,7 +1,7 @@
 {  
   "SERVER_type": "Black Mesa: Deathmatch",
   "SERVER_launch_arguments": "",
-  "DIR_executable": "",
+  "SERVER_executable": "\\srcds.exe",
   "DIR_config": "", 
   "DIR_config_file": "",
   "STEAM_authrequired": false,

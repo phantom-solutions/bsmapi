@@ -1,9 +1,10 @@
 {
   "SERVER_type": "Left 4 Dead",
   "SERVER_launch_arguments": "",
-  "DIR_executable": "",
+  "SERVER_executable": "\\srcds.exe",
   "DIR_config": "", 
   "DIR_config_file": "",
+  "DIR_maps_file_extension": "*.bsp",
   "STEAM_authrequired": false,
   "STEAM_steamcmd_required": true,
   "STEAM_workshop_enabled": false,
