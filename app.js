@@ -1,28 +1,58 @@
 var chalk = require('chalk');
-var fs = require('fs')
+var fs = require('fs');
 var path = require( 'path' );
 var process = require( "process" );
 var express = require('express');
 var saimin = express();
+var jsonxml = require('jsontoxml');
 var config = require('./storage/config.json');
+
+var debug = true;
 
 //==============================================================//
 // API REQUEST HANDLERS                                         //
 //==============================================================//
 // Fetches config files based on appid.
-saimin.get('/config/:appid', function (req, res) {
+saimin.get('/config/:appid/:format', function (req, res) {
 configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) =>
 {
-	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
+	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
 
 	if (err) {
 		res.send("404");
-		console.log(chalk.bgRed("[ERROR]") + " (" + Date().toLocaleString() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
+		console.log("[" + chalk.red("ERROR") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
+	}
+	else
+	{
+		//if :format isn't supplied, default to json.
+		if(req.params.format == "json") {
+			console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data (json) for appID: " + req.params.appid + "]"));
+			res.send(data);
+		} else if(req.params.format == "xml") {
+			console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data (xml) for appID: " + req.params.appid + "]"));
+			var xmldata = JSON.parse(data);
+			if(debug == true){
+				console.log("[" + chalk.yellow("DEBUG") + "]" + " (" + Date().toLocaleString() + ") " +  xmldata);
+			}
+			res.header('Content-Type','text/xml').send(jsonxml(xmldata))
+		}
+
+	}
+});
+});
+saimin.get('/config/:appid', function (req, res) {
+configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) =>
+{
+	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
+
+	if (err) {
+		res.send("404");
+		console.log("[" + chalk.red("ERROR") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
 	}
 	else
 	{
 		res.send(data);
-		console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data for appID: " + req.params.appid + "]"));
+		console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data (json) for appID: " + req.params.appid + "]"));
 	}
 });
 });
@@ -40,14 +70,14 @@ fs.readdir( directory, function( err, files )
 		indexlist[indexid] = jsonfile.SERVER_type;
     });
         res.json(indexlist);
-        console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending index...]"));
+        console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending index...]"));
 	});
 });
 
 // Launch the integrated server.
 saimin.listen(config.port, config.ip, function ()
 {
-	console.log(chalk.bgGreen("[INFO]") + " (" + Date().toLocaleString() + ") " + chalk.bgGreen("[Borealis Server Manager API: listening on port: " + config.port + "]"));
+	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgGreen("[Borealis Server Manager API: listening on port: " + config.port + "]"));
 });
 
 // Respond with 410.
@@ -68,7 +98,7 @@ saimin.all('/areyoualive', function (req, res)
 //==============================================================//
 // Handle Server Shutdown
 process.on("SIGINT", function () {
-	console.log(chalk.bgRed("[SHUTTING DOWN]") + " (" + Date().toLocaleString() + ") " + chalk.bgRed("[Borealis Server Manager API: Shutting down...]"));
+	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgRed("[Borealis Server Manager API: Shutting down...]"));
 	process.exit();
 });
 
@@ -83,32 +113,4 @@ if (process.platform === "win32")
 	{
 		process.emit("SIGINT");
 	});
-}
-
-
-//==============================================================//
-// API DATABASE HANDLERS		    		                    //
-//==============================================================//
-// Does simple checks to make sure things are A-okay.
-if(process.argv[2] == "test") {
-	if (fs.existsSync('node_modules'))
-	{
-		console.log(chalk.green("[OK] node_modules exists."));
-	}
-	else
-	{
-		console.log(chalk.red("[FAIL] CONGRATULATIONS, YOU BROKE EVERYTHING. ASDFGHJKL;"));
-	}
-
-	if (fs.existsSync('storage/saimin.db'))
-	{
-		console.log(chalk.green("[OK] database file exists."));
-		process.exit(0);
-	}
-	else
-	{
-		console.log(chalk.red("[FAIL] database file does not exist. creating one now."));
-		fs.closeSync(fs.openSync('storage/saimin.db', 'w'));
-		process.exit(1);
-	}
 }
