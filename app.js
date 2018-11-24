@@ -5,10 +5,29 @@ var process = require( "process" );
 var express = require('express');
 var saimin = express();
 var jsonxml = require('jsontoxml');
-var config = require('./storage/config.json');
+const config = JSON.parse(fs.readFileSync('storage/config.json'));
+var moment = require('moment-timezone');
+var os = require('os');
+var request = require('request');
 
-var debug = true;
-
+var debug = config.debug;
+function getIp() {
+	if(process.platform == "win32") {
+		var networkInterfaces = os.networkInterfaces();
+		return networkInterfaces['Ethernet'][1]['address'];
+	} else {
+		var networkInterfaces = os.networkInterfaces();
+		return networkInterfaces['eth0'][0]['address'];
+	}
+}
+function timestamp() {
+  return moment().tz(config.timezone).format('LLLL z');
+}
+/*
+function getLatestV() {
+	var latestV = request("")
+}
+*/
 //==============================================================//
 // API REQUEST HANDLERS                                         //
 //==============================================================//
@@ -16,23 +35,23 @@ var debug = true;
 saimin.get('/config/:appid/:format', function (req, res) {
 configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) =>
 {
-	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
+	console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
 
 	if (err) {
 		res.send("404");
-		console.log("[" + chalk.red("ERROR") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
+		console.log(chalk.bgRed(" ERROR ") + " (" + timestamp() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
 	}
 	else
 	{
 		//if :format isn't supplied, default to json.
 		if(req.params.format == "json") {
-			console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data (json) for appID: " + req.params.appid + "]"));
+			console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgBlue("[Sending config data (json) for appID: " + req.params.appid + "]"));
 			res.send(data);
 		} else if(req.params.format == "xml") {
-			console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data (xml) for appID: " + req.params.appid + "]"));
+			console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgBlue("[Sending config data (xml) for appID: " + req.params.appid + "]"));
 			var xmldata = JSON.parse(data);
 			if(debug == true){
-				console.log("[" + chalk.yellow("DEBUG") + "]" + " (" + Date().toLocaleString() + ") " +  xmldata);
+				console.log(chalk.bgYellow("DEBUG") + " (" + timestamp() + ") " +  xmldata);
 			}
 			res.header('Content-Type','text/xml').send(jsonxml(xmldata))
 		}
@@ -43,16 +62,16 @@ configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf
 saimin.get('/config/:appid', function (req, res) {
 configdata = fs.readFile('./storage/configs/' + req.params.appid + '.json', 'utf8', (err, data) =>
 {
-	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
+	console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgBlue("[Got request for appID: " + req.params.appid + "]"));
 
 	if (err) {
 		res.send("404");
-		console.log("[" + chalk.red("ERROR") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
+		console.log(chalk.bgRed(" ERROR ") + " (" + timestamp() + ") " + chalk.bgYellow("[Couldn't locate appID: " + req.params.appid + "]"));
 	}
 	else
 	{
 		res.send(data);
-		console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending config data (json) for appID: " + req.params.appid + "]"));
+		console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgBlue("[Sending config data (json) for appID: " + req.params.appid + "]"));
 	}
 });
 });
@@ -70,14 +89,21 @@ fs.readdir( directory, function( err, files )
 		indexlist[indexid] = jsonfile.SERVER_type;
     });
         res.json(indexlist);
-        console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgBlue("[Sending index...]"));
+        console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgBlue("[Sending index...]"));
 	});
 });
+/*
+saimin.all('/update/:localversion', function (req, res) {
+	var lv = req.params.localversion;
+})
+*/
 
 // Launch the integrated server.
-saimin.listen(config.port, config.ip, function ()
+saimin.listen(config.port, config.host, function ()
 {
-	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgGreen("[Borealis Server Manager API: listening on port: " + config.port + "]"));
+	console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + "Borealis is listening on... " +
+	"\n\t" + "Public IP: " + chalk.bgGreen(getIp() + ":" + config.port) +
+	"\n\t" + "Local IP:  " + chalk.bgGreen("127.0.0.1:" + config.port));
 });
 
 // Respond with 410.
@@ -98,7 +124,7 @@ saimin.all('/areyoualive', function (req, res)
 //==============================================================//
 // Handle Server Shutdown
 process.on("SIGINT", function () {
-	console.log("[" + chalk.cyan("INFO") + "]" + " (" + Date().toLocaleString() + ") " + chalk.bgRed("[Borealis Server Manager API: Shutting down...]"));
+	console.log(chalk.bgCyan(" INFO ") + " (" + timestamp() + ") " + chalk.bgRed("[Borealis Server Manager API: Shutting down...]"));
 	process.exit();
 });
 
