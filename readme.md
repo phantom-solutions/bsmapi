@@ -1,3 +1,6 @@
+# BSMAPI is being discontinued.
+Sorry for those who looked forward to this. But it wasn't a very good idea. Instead, the concepts and core aspects of BSMAPI are being integrated into Borealis.
+
 # BSMAPI - Borealis (Game)server Manager API
 Just a simple API backend for the Borealis Gameserver Manager.
 
