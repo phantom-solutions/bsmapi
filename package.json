@@ -27,7 +27,7 @@
     "jsontoxml": "0.0.11",
     "lodash": ">=4.17.13",
     "log": "^1.4.0",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.35",
     "request": "^2.88.0"
   }
 }
