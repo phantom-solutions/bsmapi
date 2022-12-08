@@ -23,7 +23,7 @@
   "dependencies": {
     "async": "^2.1.4",
     "chalk": "^1.1.3",
-    "express": "^4.14.1",
+    "express": "^4.18.2",
     "jsontoxml": "0.0.11",
     "lodash": ">=4.17.13",
     "log": "^1.4.0",
